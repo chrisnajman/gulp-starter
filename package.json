@@ -1,0 +1,26 @@
+{
+  "name": "gulpsasspostcssstarter",
+  "version": "1.0.0",
+  "description": "Basic starter project for SASS and PostCSS use via Gulp",
+  "author": "Chris Najman",
+  "license": "MIT",
+  "devDependencies": {
+    "autoprefixer": "^8.1.0",
+    "browser-sync": "^2.23.6",
+    "cssnano": "^3.10.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.0",
+    "gulp-cache": "^1.0.2",
+    "gulp-group-css-media-queries": "^1.2.2",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0",
+    "gulp-useref": "^3.1.4",
+    "run-sequence": "^2.2.1"
+  },
+  "dependencies": {
+    "npm": "^5.7.1"
+  }
+}

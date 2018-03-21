@@ -1,0 +1,35 @@
+// rempx mixin for sass test
+// Source: https://gist.github.com/bitmanic/1134548
+// REM/PX - currently you put in a pixel value and outputs a rem value only
+$baseline-px: 16px;
+@mixin rempx($property, $px-values) {
+  // Convert the baseline into rems
+  $baseline-rem: $baseline-px / 1rem;
+  // !!! Uncomment next line if you want both pixel values and rem values outputted
+  // #{$property}: $px-values; 
+  // If there is only one (numeric) value, return the property/value line for it.
+  @if type-of($px-values) == "number" {
+    #{$property}: $px-values / $baseline-rem; }
+  @else {
+    // Create an empty list that we can dump values into
+    $rem-values: unquote("");
+    @each $value in $px-values {
+      // If the value is zero, return 0
+      @if $value == 0 {
+        $rem-values: append($rem-values, $value); }
+      @else {
+        $rem-values: append($rem-values, $value / $baseline-rem); } }
+    // Return the property and its list of converted values
+    #{$property}: $rem-values; } 
+}
+
+// Usage
+// @include rempx('padding',32px);
+// Output: 
+// padding: 2rem;
+
+// If #{$property}: $px-values; is uncommented (for older browsers that don't recognise rem):
+// @include rempx('padding',32px);
+// Output:
+// padding: 32px;
+// padding: 2rem;

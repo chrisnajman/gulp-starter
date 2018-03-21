@@ -1,0 +1,97 @@
+/*
+  This file tests whether node package 'gulp-group-media-queries'
+  does indeed group media queries. It seems it does.
+*/
+
+body { 
+  background:#80b3ff;
+  color: #081a00;
+
+  @media (min-width: 768px) {
+    background: #b3d1ff;
+  }
+
+  @media (min-width: 960px) {
+    background: #cce0ff;
+  }
+
+}
+
+
+h2 { 
+  border-bottom:2px dashed #1f6600; 
+
+  @media (min-width: 768px) {
+    border-color: #0f3300;
+  }
+
+  @media (min-width: 960px) {
+    border-color: #081a00;
+  }
+
+}
+
+h3 { 
+	border-bottom:1px solid #8c8c8c; 
+
+  @media (min-width: 768px) {
+    border-color: #b3b3b3;
+  }
+
+  @media (min-width: 960px) {
+    border-color: #ccc;
+  }
+
+}
+
+h2, h3 {
+  code { 
+    color:#000;
+    @media (min-width: 768px) {
+      color: #4d4d4d;
+    }
+
+    @media (min-width: 960px) {
+      color: #666;
+    }
+  }
+}
+
+
+
+pre code,
+p code { 
+  color:#000;
+  @media (min-width: 768px) {
+    color: #4d4d4d;
+  }
+
+  @media (min-width: 960px) {
+    color: #666;
+  }
+}
+
+
+
+.wrapper {
+	background:#ffebcc;
+
+  @media (min-width: 768px) {
+    background: #fff5e6;
+  }
+
+  @media (min-width: 960px) {
+    background: #fff;
+  }
+
+}
+
+@media (min-width: 768px) {
+  .some-rule { background: #fff5e6; }
+}
+
+@media (min-width: 960px) {
+  .some-other-rule {background: #fff;}
+}
+
+

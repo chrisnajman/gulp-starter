@@ -1,0 +1,32 @@
+// Test mixin
+@import "partials/mixins";
+// Very simple styles
+@import "partials/base";
+// Test Group Media Queries
+@import "partials/group-media-queries";
+//
+
+
+
+// Test for SASS, CSSNano and Autoprefixer
+/* cssnano will remove all comments */
+
+.cssnano_scss_autoprefixer, .cssnano_scss_autoprefixer + p, [class*="cssnano"], .cssnano {
+  
+  /* autoprefixer will add prefixes for flex */
+  display: flex;
+
+  /* cssnano will output following four rules as margin: 1rem 2.5rem 2rem 1.5rem */
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-left: 1.5rem;
+  margin-right: 2.5rem;
+
+  /* cssnano will do the calculation and output as vanilla css */
+  width: calc(50rem - (2 * 1.75rem));
+
+  /* SASS rempx mixin will convert pixel value to 2rem */
+  @include rempx(padding, 32px)
+}
+
+

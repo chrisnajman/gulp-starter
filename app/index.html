@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0' />
+	<title>Gulp Starter Projects: Tests</title>
+
+	<!--build:css css/styles.min.css-->
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/print.css">
+	<!--endbuild-->
+</head>
+<body>
+<div class="wrapper">
+
+	<h1>Gulp Starter Project: Tests</h1>
+
+	<p>If your browser launched after the <code>gulp watch</code> command you're over the first hurdle...</p>
+
+	<section>
+
+		<h2><code>/app</code> -- after running <code>gulp watch</code></h2>
+
+		<h3><code>app/index.html</code> -- css build tags look like this:</h3>
+
+<pre><code>
+&lt;!--build:css css/styles.min.css--&gt;
+	&lt;link rel="stylesheet" href="css/style.css"&gt;
+	&lt;link rel="stylesheet" href="css/print.css"&gt;
+&lt;--endbuild--&gt;</code></pre>
+
+		<h3><code>app/css/style.css</code> should look like this:</h3>
+		<p><code>*,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}html{font-size:100%;height:100%;overflow-y:scroll;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{font-size:1rem;font-family:sans-serif;padding:.625rem}h1{font-size:1.875rem}h2{font-size:1.5rem}h3{font-size:1.125rem}h2,h3{padding-bottom:.3125rem;margin-bottom:1.875rem}h2 code,h3 code{font-size:100%}p,ul{margin-bottom:30px}p code,pre code{font-size:100%}section{margin-bottom:3.125rem}.wrapper{max-width:64rem;min-width:18.75rem;padding:0 1.25rem;margin:0 auto;margin-bottom:3.75rem;overflow:hidden}body{background:#80b3ff;color:#081a00}h2{border-bottom:2px dashed #1f6600}h3{border-bottom:1px solid #8c8c8c}h2 code,h3 code,p code,pre code{color:#000}.wrapper{background:#ffebcc}.cssnano,.cssnano_scss_autoprefixer,.cssnano_scss_autoprefixer+p,[class*=cssnano]{display:-webkit-box;display:-ms-flexbox;display:flex;margin:1rem 2.5rem 2rem 1.5rem;width:46.5rem;padding:2rem}@media (min-width:768px){body{background:#b3d1ff}h2{border-color:#0f3300}h3{border-color:#b3b3b3}h2 code,h3 code,p code,pre code{color:#4d4d4d}.some-rule,.wrapper{background:#fff5e6}}@media (min-width:960px){body{background:#cce0ff}h2{border-color:#081a00}h3{border-color:#ccc}h2 code,h3 code,p code,pre code{color:#666}.some-other-rule,.wrapper{background:#fff}}</code></p>
+
+		<ul>
+			<li>Gulp SASS has compiled <code>.scss</code>.</li>
+			<li>Gulp Group Media Queries has identified common media queries rules and grouped them under one media query.</li>
+			<li>(PostCSS) Autoprefixer has provided vendor prefixes in the <code>.css</code> files.</li>
+			<li>(PostCSS) CSSNano has performed calculations, cleaned-up and minified <code>.css</code> files</li>
+		</ul>
+
+		<h3><code>app/css/print.css</code> should look like this:</h3>
+		<p><code>@media print{*,:after,:before,:first-letter,blockquote:first-line,div:first-line,li:first-line,p:first-line{background:transparent!important;color:#000!important;-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}a[href^="#"]:after,a[href^="javascript:"]:after{content:""}pre{white-space:pre-wrap!important}blockquote,pre{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}img,tr{page-break-inside:avoid}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}.site-navigation{display:none}}</code></p>
+
+		<ul>
+			<li>(PostCSS) CSSNano has cleaned-up and minified code.</li>
+		</ul>
+
+		<h3><code>app/index.html</code> -- js build tags look like this:</h3>
+
+<pre><code>
+&lt;!--build:js js/main.min.js--&gt;
+	&lt;script src="js/lib/a-library.js"&gt;&lt;/script&gt;
+	&lt;script src="js/lib/another-library.js"&gt;&lt;/script&gt;
+	&lt;script src="js/scripts.js"&gt;&lt;/script&gt;
+&lt;--endbuild--&gt;</code></pre>
+
+	</section>
+
+	<section>
+
+		<h2><code>/docs</code> -- after running <code>gulp build</code></h2>
+
+		<h3><code>docs/index.html</code> -- css build tags should be replaced by:</h3>
+
+		<code>&lt;link rel="stylesheet" href="css/styles.min.css"&gt;</code>
+
+		<h3><code>docs/css/styles.min.css</code> should look like this:</h3>
+
+		<p><code>*,:after,:before{-webkit-box-sizing:border-box;box-sizing:border-box}html{font-size:100%;height:100%;overflow-y:scroll;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{font-size:1rem;font-family:sans-serif;padding:.625rem}h1{font-size:1.875rem}h2{font-size:1.5rem}h3{font-size:1.125rem}h2,h3{padding-bottom:.3125rem;margin-bottom:1.875rem}h2 code,h3 code{font-size:100%}p,ul{margin-bottom:30px}p code,pre code{font-size:100%}section{margin-bottom:3.125rem}.wrapper{max-width:64rem;min-width:18.75rem;padding:0 1.25rem;margin:0 auto;margin-bottom:3.75rem;overflow:hidden}body{background:#80b3ff;color:#081a00}h2{border-bottom:2px dashed #1f6600}h3{border-bottom:1px solid #8c8c8c}h2 code,h3 code,p code,pre code{color:#000}.wrapper{background:#ffebcc}.cssnano,.cssnano_scss_autoprefixer,.cssnano_scss_autoprefixer+p,[class*=cssnano]{display:-webkit-box;display:-ms-flexbox;display:flex;margin:1rem 2.5rem 2rem 1.5rem;width:46.5rem;padding:2rem}@media (min-width:768px){body{background:#b3d1ff}h2{border-color:#0f3300}h3{border-color:#b3b3b3}h2 code,h3 code,p code,pre code{color:#4d4d4d}.bum,.wrapper{background:#fff5e6}}@media (min-width:960px){body{background:#cce0ff}h2{border-color:#081a00}h3{border-color:#ccc}h2 code,h3 code,p code,pre code{color:#666}.tit,.wrapper{background:#fff}}
+@media print{*,:after,:before,:first-letter,blockquote:first-line,div:first-line,li:first-line,p:first-line{background:transparent!important;color:#000!important;-webkit-box-shadow:none!important;box-shadow:none!important;text-shadow:none!important}a,a:visited{text-decoration:underline}a[href]:after{content:" (" attr(href) ")"}abbr[title]:after{content:" (" attr(title) ")"}a[href^="#"]:after,a[href^="javascript:"]:after{content:""}pre{white-space:pre-wrap!important}blockquote,pre{border:1px solid #999;page-break-inside:avoid}thead{display:table-header-group}img,tr{page-break-inside:avoid}h2,h3,p{orphans:3;widows:3}h2,h3{page-break-after:avoid}.site-navigation{display:none}}</code></p>
+
+		<ul>
+			<li>HREF has concatenated and minified <code>.css</code> files.</li>
+		</ul>
+
+		<h3><code>app/index.html</code> -- js build tags should be replaced by:</h3>
+
+		<code>&lt;script src="js/main.min.js"&gt;&lt;/script&gt;</code>
+
+		<ul>
+			<li>HREF has concatenated and minified <code>.js</code> files.</li>
+		</ul>
+
+	</section>
+
+	<section>
+
+		<h2>Images</h2>
+
+		<p>You can compare the file sizes in <code>/app/images</code> to those in <code>/docs/images</code> to confirm that <code>gulp-imagemin</code> has optimised them.</p>
+
+	</section>
+
+</div>	
+
+
+<!--build:js js/main.min.js -->
+<script src="js/lib/a-library.js"></script>
+<script src="js/lib/another-library.js"></script>
+<script src="js/scripts.js"></script>
+<!-- endbuild -->
+
+</body>
+</html>

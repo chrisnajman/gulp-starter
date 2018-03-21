@@ -1,0 +1,55 @@
+*, *:after, *:before {
+  box-sizing: border-box; 
+}
+
+html {
+  font-size:100%;
+   height:100%;
+  overflow-y:scroll;
+  -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body { 
+  @include rempx(font-size, 16px);
+  font-family:sans-serif;
+  @include rempx(padding, 10px);
+}
+
+h1 { @include rempx(font-size, 30px); }
+
+h2 { 
+	@include rempx(font-size, 24px); 
+}
+
+h3 { 
+	@include rempx(font-size, 18px); 
+}
+
+h2, h3 {
+  @include rempx(padding-bottom, 5px);
+  @include rempx(margin-bottom, 30px);
+  code { 
+    font-size:100%; 
+  }
+}
+
+ul,
+p { margin-bottom:30px;}
+
+pre code,
+p code { 
+	font-size:100%;
+}
+
+section { @include rempx(margin-bottom, 50px); }
+
+.wrapper {
+	@include rempx(max-width, 1024px);
+	@include rempx(min-width, 300px);
+	@include rempx(padding, 0 20px);
+	margin: 0 auto;
+	@include rempx(margin-bottom, 60px);
+	overflow:hidden;
+}
+
