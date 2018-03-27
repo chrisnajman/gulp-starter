@@ -25,7 +25,7 @@ More specifically, I want to be able to:
  -- all by typing two simple commands in the command line.
 
 
-*Note: **gulp-starter-project** is **not intended for database-driven projects** e.g. Wordpress.*
+*Note: **gulp-starter-project** is **not intended for database-driven projects** e.g. Wordpress. If that's what you're looking for try [Gulp Boneus](https://github.com/chrisnajman/gulp-boneus) a Wordpress theme based on the 'Bones' theme and built with Gulp.*
 
 ## Use
 

@@ -79,9 +79,9 @@ gulp.task('cache:clear', function (callback) {
 
 
 
-/** Build sequences **/
+/** Build and Watch sequences **/
 
-// Build App: 'gulp watch'
+// Watch App: 'gulp watch'
 gulp.task('watch', ['browserSync', 'style'], function(){
   gulp.watch('./app/scss/**/*.scss', ['style']); 
   // Reloads the browser whenever HTML or JS files change
@@ -97,3 +97,7 @@ gulp.task('build', function (callback) {
   )
 });
 
+// Build and Watch: 'gulp'
+// gulp.task('default', function (callback) {
+//   runSequence('build', ['watch'], callback)
+// });
